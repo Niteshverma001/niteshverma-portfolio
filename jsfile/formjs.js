@@ -20,11 +20,11 @@ document.getElementById("hireForm").addEventListener("submit", function(event) {
 
 function sendEmail(){
     Email.send({
-    Host : "smtp.elasticemail.com",
-    Username : "username",
+    Host : "smtp.gmail.com",
+    Username : "niteshverma7376@gmail.com",
     Password : "password",
-    To : 'them@website.com',
-    From : "you@isp.com",
+    To : 'mr_patel_9001@gmail.com',
+    From : "d",
     Subject : "This is the subject",
     Body : "And this is the body"
 }).then(
