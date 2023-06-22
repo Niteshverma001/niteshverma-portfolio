@@ -18,7 +18,7 @@ document.getElementById("hireForm").addEventListener("submit", function(event) {
   });
 
 
-function sendemail(){
+function sendEmail(){
     Email.send({
     Host : "smtp.elasticemail.com",
     Username : "username",
