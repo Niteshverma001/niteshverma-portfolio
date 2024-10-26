@@ -507,24 +507,34 @@ span {
 }
 
 /* card animation   */
-.project .box-container,
-.certificate .box-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
+.project .box-container{
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 25px;
 }
-
 .project .box-container .box {
-  /* .certificate .box-container .box{ */
-  overflow: hidden;
+  overflow-y: scroll;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, .1);
   border: .5rem solid var(--main-color);
   border-radius: .5rem;
-  flex: 1 1 30rem;
-  height: 25rem;
-  position: relative;
+  height: 45rem;
+  width: 40rem;
+  padding: 20px;
+  
+   /* position: relative;  */
 }
 
+::-webkit-scrollbar{
+  display: none;
+}
+
+ .project .box-container .box .card{
+  object-fit: contain;
+  
+} 
+
+.project .box-container .box video,
 .project .box-container .box img,
 .certificate .box-container .box img {
   height: 100%;
@@ -532,24 +542,9 @@ span {
   object-fit: cover;
 }
 
-.project .box-container .box .content {
-  position: absolute;
-  top: -100%;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  text-align: center;
-  background: rgba(0, 0, 0, .7);
-  padding: 2rem;
-  padding-top: 5rem;
-}
 
-.project .box-container .box:hover .content {
-  top: 0;
-}
-
-.project .box-container .box .content h3 {
-  font-size: 2.5rem;
+.project .box-container .box .card h1 {
+  font-size: 2.9rem;
   color: var(--orange);
 }
 
@@ -557,12 +552,32 @@ span {
   font-size: 1.5rem;
   color: #eee;
   padding: .5rem 0;
+  overflow-x: hidden;
+  margin-bottom: 12px;
+
 }
+.project .box-container  .card .btn{
+border-radius: 6px;
+padding: 4px 18px;
+margin-top: 12px;
+border: 2px solid white;
+background: var(--main-color);
+color: white;
+font-size: 18px;
+} 
 
 /* certificate design  */
 .certificate {
   background: var(--second-bg-color);
 
+}
+.certificate .box-container {
+  display: flex;
+ justify-content: space-between;
+ align-items: center;
+ flex-direction: row;
+ flex-wrap: wrap;
+ gap: 1.5rem;
 }
 
 .certificate .box-container {
@@ -816,6 +831,7 @@ footer .footer-content p{
 }
 
 @media (max-width: 991px) {
+
   .header {
     padding: 2rem 4%;
   }
@@ -897,6 +913,13 @@ footer .footer-content p{
     background: var(--bg-color);
     opacity: 0.6;
   }
+  .project .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;
+    }
 }
 
 @media (max-width: 520px) {
@@ -917,6 +940,13 @@ footer .footer-content p{
     width: 38px;
     height: 38px;
   }
+  .project .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;
+    }
 }
 
 @media (max-width: 462px) {
@@ -935,6 +965,13 @@ footer .footer-content p{
   .footer {
     flex-direction: column-reverse;
   }
+  .project .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;
+    }
 
   /* .footer .box-container .box {
 
@@ -960,6 +997,13 @@ footer .footer-content p{
   .home-content {
     font-size: 5rem;
   }
+  .project .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;
+    }
 }
 
 /* keyframe animation */
